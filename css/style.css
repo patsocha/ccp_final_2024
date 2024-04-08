@@ -1,0 +1,240 @@
+/* // <uniquifier>: Use a uniquifier for the class name */
+/* // <weight>: Use a value from 100 to 900 */
+
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .navbar {
+  background-color: rgb(0, 6, 90); /* Darker than the body background but different for contrast */
+}
+
+
+/* Style for the theme toggle button */
+#theme-toggle {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.active {
+  text-decoration: underline;
+}
+
+.animation {
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .animation {
+    animation: none !important; /* Disable animations */
+    transition: none !important; /* Disable transitions */
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  max-width: 95%; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.container img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+header,ul{
+text-align: center;
+}
+
+header, li{
+  text-align: left;
+  
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+.navbar {
+  background-color: #333; 
+  padding: 10px 20px; 
+}
+
+.navbar ul {
+  font-family: 'Jost';
+  list-style-type: none; 
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline; 
+  margin-right: 20px; 
+}
+
+.navbar ul li a {
+  text-decoration: none; 
+  color: #fff; 
+  font-weight: bold; 
+}
+
+.navbar ul li a:hover {
+  color: #ffd700; 
+  font-size: 20px;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #ffd700;
+  color: #ffd700 
+
+}
+
+
+
+
+.skip-link {
+  background: #333;
+  color: #fff;
+  font-weight: 700;
+  left: 50%;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0%);
+}
+
+.skip-link {
+  transition: transform 0.3s;
+}
+
+
+.grid-container {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; 
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .navbar ul {
+      display: flex;
+      justify-content: center; 
+      padding: 0;
+  }
+
+  .navbar li {
+      margin: 0 20px; 
+  }
+
+  .header, .subheader {
+      text-align: center; 
+  }
+
+  .paragraph, p {
+      font-size: 18px; 
+  }
+
+  .container {
+      width: 80%;
+      margin: auto; 
+  }
+
+  img {
+      max-width: 100%; 
+      height: auto; 
+  }
+
+  a:hover, a:focus {
+    color: #ffd700; 
+    text-decoration: underline; 
+  }
+
+  .navbar a:hover, .navbar a:focus {
+    color: #005aaa; 
+  }
+
+  .navbar a.active {
+    color: ffd700; 
+  }
+
+  .navbar a.active:hover, .navbar a.active:focus {
+    background-color: #000000; 
+  }
+
+}
+
+
+@media only screen and (min-width: 1920px) {
+  .container {
+      max-width: 1600px; 
+      margin: auto; 
+      padding: 20px; 
+  }
+
+  .grid-container {
+      grid-template-columns: repeat(4, 1fr); 
+  }
+
+  .navbar {
+      justify-content: center; 
+      padding: 0 30px; 
+  }
+
+  .navbar ul {
+      justify-content: space-around; 
+  }
+
+  .header {
+      font-size: 3rem; 
+  }
+
+  .subheader {
+      font-size: 2.5rem; 
+  }
+
+  .paragraph, p {
+      font-size: 1.2rem; 
+  }
+
+  img {
+      width: auto; 
+      max-width: 100%; 
+      height: auto; 
+  }
+}
